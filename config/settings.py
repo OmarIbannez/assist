@@ -27,7 +27,7 @@ DJANGO_APPS = (
 )
 
 THIRD_PARTY_APPS = (
-    #'suit',
+    'suit',
 )
 
 LOCAL_APPS = (

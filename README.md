@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # django1.9 template
 
 Creating your project
@@ -32,3 +33,6 @@ Installing dependencies
 
     $ source venv/bin/activate
     $ pip install -r requirements/requirements.txt
+=======
+# assist
+>>>>>>> bbdf0f13bd9981a619fd16fac2155c14cfa0c81d

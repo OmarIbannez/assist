@@ -1,10 +1,9 @@
-<<<<<<< HEAD
-# django1.9 template
+# Assist
 
-Creating your project
+Download project
 =====================
 
-    $ django-admin startproject --template=https://github.com/OmarIbannez/django1.9_template/archive/master.zip --extension=py,rst,html project_name
+    $ git clonehttps://github.com/OmarIbannez/assist.git
 
 Installing virtualenv
 =====================
@@ -26,13 +25,34 @@ Installing postgresql
 Creating virtualenv
 =====================
 
-    $ virtualenv -p /usr/bin/python3 venv
+    $ virtualenv venv
 
 Installing dependencies
 =====================
 
     $ source venv/bin/activate
     $ pip install -r requirements/requirements.txt
-=======
-# assist
->>>>>>> bbdf0f13bd9981a619fd16fac2155c14cfa0c81d
+
+
+Creating DB
+=====================
+sudo -i -u postgres
+createdb databasename
+psql
+CREATE USER username WITH PASSWORD 'password';
+GRANT ALL PRIVILEGES ON DATABASE databasename to username;
+
+
+Migrating models
+=====================
+python manage.py migrate
+
+
+Create first username
+=====================
+python manage.py createsuperuser
+
+
+Run project (only for test)
+=====================
+python manage.py runserver

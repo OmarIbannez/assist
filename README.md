@@ -34,13 +34,16 @@ Installing dependencies
     $ pip install -r requirements/requirements.txt
 
 
+
+
 Creating DB
 =====================
-sudo -i -u postgres
-createdb databasename
-psql
-CREATE USER username WITH PASSWORD 'password';
-GRANT ALL PRIVILEGES ON DATABASE databasename to username;
+
+    $ sudo -i -u postgres
+    $ createdb databasename
+    $ psql
+    $ CREATE USER username WITH PASSWORD 'password';
+    $ GRANT ALL PRIVILEGES ON DATABASE databasename to username;
 
 
 Migrating models

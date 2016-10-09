@@ -30,6 +30,15 @@ class Zone(BaseModel):
     def __str__(self):
         return self.__unicode__()
 
+class Group(BaseModel):
+    name = models.CharField(max_length=255, blank=True, null=True)
+
+    def __unicode__(self):
+        return u'{0}'.format(self.name)
+
+    def __str__(self):
+        return self.__unicode__()
+
 class Member(BaseModel):
     first_name = models.CharField(max_length=255, blank=True, null=True)
     middle_name = models.CharField(max_length=255, blank=True, null=True)
@@ -37,6 +46,7 @@ class Member(BaseModel):
     division = models.ForeignKey(Division, null=True)
     moi = models.ForeignKey(Moi, null=True)
     zone = models.ForeignKey(Zone, null=True)
+    group = models.ForeignKey(Group, null=True)
 
     def __unicode__(self):
         return u'{0} {1} {2}'.format(self.first_name,  self.middle_name, self.last_name)

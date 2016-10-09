@@ -1,9 +1,5 @@
 from django.contrib import admin
-from members.models import Member
-from members.models import Attend
-from members.models import Division
-from members.models import Moi
-from members.models import Zone
+from members.models import (Member, Attend, Division, Moi, Zone, Group)
 from django.http import HttpResponse, HttpResponseForbidden
 from members.actions import export_as_csv_action
 
@@ -16,6 +12,7 @@ class MemberAdmin(admin.ModelAdmin):
         'division',
         'moi',
         'zone',
+        'group',
     )
 
 class DivisionAdmin(admin.ModelAdmin):
@@ -33,6 +30,11 @@ class ZoneAdmin(admin.ModelAdmin):
         'name',
     )
 
+class GroupAdmin(admin.ModelAdmin):
+    fields = (
+        'name',
+    )
+
 class AttendAdmin(admin.ModelAdmin):
     list_display = ('attendee', 'date_attend', 'division', 'moi', 'zone')
     list_filter = ('date_attend',)
@@ -44,3 +46,4 @@ admin.site.register(Member, MemberAdmin)
 admin.site.register(Division, DivisionAdmin)
 admin.site.register(Moi, MoiAdmin)
 admin.site.register(Zone, ZoneAdmin)
+admin.site.register(Group, GroupAdmin)

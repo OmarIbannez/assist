@@ -26,9 +26,7 @@ DJANGO_APPS = (
     'django.contrib.staticfiles',
 )
 
-THIRD_PARTY_APPS = (
-    'suit',
-)
+THIRD_PARTY_APPS = ()
 
 LOCAL_APPS = (
     'core',

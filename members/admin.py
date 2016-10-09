@@ -5,7 +5,7 @@ from members.actions import export_as_csv_action
 
 
 class MemberAdmin(admin.ModelAdmin):
-    fields = (
+    list_display = (
         'first_name',
         'middle_name',
         'last_name',
